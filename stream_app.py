@@ -5,4 +5,5 @@ if user:
  url=f"https://8201-103-172-166-163.ngrok-free.app/Chatbot?user={user}"
  response=requests.get(url)
  data=response.json()
- st.write(data['Output'])
+ if data:
+  st.write(data['Output'])
